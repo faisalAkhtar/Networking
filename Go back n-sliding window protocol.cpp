@@ -18,7 +18,7 @@ int main()
 	while(send[frames]!='\0')
 		frames++;
 
-	int i=0, n=1;
+	int i=0, j=0, n=1;
 	while(true)
 	{
 		cout << " " << n << ".";
@@ -28,14 +28,17 @@ int main()
 		if(n!=1)
 			cout << "\t\t   Ack received" << endl;
 		cout << "\t\t   Message sent = ";
-		for(int j=0; j<win; j++)
+		for(j=0; j<win; j++)
 		temp[j]=send[j+i];
+		temp[j+1] = '\0';
 		puts(temp);
 		usleep(500000);
 
 		//receive
 		cout << "\n\t\t\t\t\t\tReceiver : \n";
 		cout << "\t\t\t\t\t\t   Message received = ";
+		for(j=0; j<win; j++)
+		rec[j+i]=temp[j];
 		puts(temp);
 		cout << "\t\t\t\t\t\t   Ack sent\n";
 		usleep(500000);
