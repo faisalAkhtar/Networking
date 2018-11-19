@@ -1,3 +1,6 @@
+/*
+	This simple program takes IP address (v4) as input and identifies the class to which the IP address belongs
+*/
 #include<iostream>
 using namespace std;
 
@@ -13,7 +16,7 @@ int main()
 		cin >> ip[i];
 		if(ip[i]<0 || ip[i]>255)
 		{
-			cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\tfuck you!\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl;
+			cout << "\n\n\t\t\tInvalid input\n\n";
 			i--;
 		}
 	}
